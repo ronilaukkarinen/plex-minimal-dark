@@ -77,10 +77,12 @@ function loadCustomStyles(){
 
   if (cssBGColor!=false)
   {
-    var bgcolcss = '#content{background-color: '+cssBGColor+'}.nav-bar > div{background:'+cssBGColor+';}.scroll-container > div > div > div{background:'+cssBGColor+';}.application div[class^="BottomBar"] {background-color:'+cssBGColor+' !important;}.application div[class^="SeekBar-seekBarTrack"] {background-color:'+cssBGColor+';}.application div[class^="SeekBar-seekBarFill"] {background-color:#1db854;}.application div[data-qa-id="sidebarSource"] a {box-shadow:none !important;padding: 0 0 0 18px !important; !important;min-width: 40px; !important;width: auto; !important;}.application div[class^="NavBar-plexLogo-3"] {display:none !important;}button[aria-label="Activity"]{display:none !important;}.application div[class^="VolumeSlider-fill"] {background:#aaa !important;}.application div[class^="PlexIcon-plexIcon"] {width:14px; !important;height:14px; !important;}.application div[class^="SourceSidebar-collapsedSidebar"] {min-width: 50px; !important;width: 50px; !important;}';
+    var bgcolcss = '#content{background-color: '+cssBGColor+'}.nav-bar > div{background:'+cssBGColor+';}.scroll-container > div > div > div{background:'+cssBGColor+';}.application div[class^="BottomBar"] {background-color:'+cssBGColor+' !important;}.application div[class^="SeekBar-seekBarTrack"] {background-color:'+cssBGColor+';}.application div[class^="SeekBar-seekBarFill"] {background-color:#1db854;}div[class^="Measure-container"] a {color:hsla(0,0%,100%,.45) !important;text-transform:none !important;font-size: 14px !important;}[class^="Button-button"]{text-transform:none !important;}.application div[data-qa-id="sidebarSource"] a {box-shadow:none !important;padding: 0 0 0 18px !important; !important;min-width: 40px; !important;width: auto; !important;}a[class^="NavBar-plexLogo"] {display:none !important;}[class^="SourceSidebar"] {box-shadow:none !important;}button[aria-label="Activity"]{display:none !important;}.application div[class^="VolumeSlider-fill"] {background:#aaa !important;}.application div[class^="PlexIcon-plexIcon"] {width:14px; !important;height:14px; !important;}.application div[class^="SourceSidebar-collapsedSidebar"] {min-width: 50px; !important;width: 50px; !important;}';
     $('head').append('<style type="text/css">'+ bgcolcss +'</style>');
   }
-  
+
+  $('body [class*="PageHeaderTabButton-isSelected-"]').css('color', '#1db854 !important');
+
   if (cssTopbarColor!=false)
   {
     var topbarcolcss = '.nav-bar{background-color: '+cssTopbarColor+'}';
